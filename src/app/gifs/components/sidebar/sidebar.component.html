@@ -1,0 +1,26 @@
+
+<div class="d-flex flex-column">
+  <div id="sidebar" class="bg-dark text-light">
+    <div class="m-3">
+      <h1 >Gifs-App</h1>
+      <hr>
+      <p>
+        {{ history.length > 0 ? 'Last 10 searches' : 'Not history' }}
+      </p>
+      <button (click)="clean()"
+              type="button"
+              class="btn btn-light mb-3"
+              *ngIf="history.length > 0">
+        Clean history
+      </button>
+      <!-- Historial -->
+      <ng-container *ngFor="let item of history">
+        <p class="item"
+           (click)="searchByHistory(item)">
+          {{ item | titlecase }}
+        </p>
+      </ng-container>
+
+    </div>
+  </div>
+</div>

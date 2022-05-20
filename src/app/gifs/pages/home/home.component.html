@@ -1,0 +1,17 @@
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-2">
+      <app-sidebar (onSearch)="searchByHistory($event)"></app-sidebar>
+    </div>
+
+    <div class="col">
+      <!-- escuchar el evento onEmitSearch() tambien puede ser click-->
+      <app-search></app-search>
+      <app-result></app-result>
+    </div>
+
+  </div>
+
+</div>
+

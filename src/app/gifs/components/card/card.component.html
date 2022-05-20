@@ -1,0 +1,8 @@
+<div class="card" style="width: 18rem;">
+  <img [src]="gif.images.downsized_medium.url" class="card-img-top" [alt]="gif.title">
+  <div class="card-body">
+    <h5 class="card-title">{{ gif.title }}</h5>
+    <p class="card-text">{{ gif.username}}</p>
+    <a [href]="gif.source" class="btn btn-primary" target="_blank">Go to the gif</a>
+  </div>
+</div>
